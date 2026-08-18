@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: invyte-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: invyte
+      POSTGRES_PASSWORD: invyte_password
+      POSTGRES_DB: invyte
+    ports:
+      - "5432:5432"
+    volumes:
+      - invyte_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  invyte_postgres_data:
