@@ -3,7 +3,7 @@ exports.seed = async function(knex) {
 
   await knex('events').insert([
     {
-      host_id: 1,
+      host_id: 2,
       name: 'Test Event',
       description: 'A test event for development',
       event_date: '2026-09-15',

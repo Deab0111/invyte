@@ -7,16 +7,31 @@ exports.seed = async function(knex) {
 
   await knex('users').insert([
     {
-      name: 'Admin User',
+      first_name: 'John',
+      last_name: 'Admin',
       email: 'admin@invyte.com',
       password_hash: password,
-      role: 'admin'
+      role: 'admin',
+      rank: 'Captain',
+      phone: '555-111-1111'
     },
     {
-      name: 'Test User',
+      first_name: 'Henry',
+      last_name: 'Host',
+      email: 'host@invyte.com',
+      password_hash: password,
+      role: 'host',
+      rank: 'Major',
+      phone: '555-222-2222'
+    },
+    {
+      first_name: 'John',
+      last_name: 'User',
       email: 'user@invyte.com',
       password_hash: password,
-      role: 'user'
+      role: 'user',
+      rank: 'Staff Sergeant',
+      phone: '555-333-3333'
     }
   ])
 }
