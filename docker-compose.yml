@@ -12,5 +12,18 @@ services:
     volumes:
       - invyte_postgres_data:/var/lib/postgresql/data
 
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: invyte-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://invyte:invyte_password@postgres:5432/invyte
+    depends_on:
+      - postgres
+
 volumes:
   invyte_postgres_data:
