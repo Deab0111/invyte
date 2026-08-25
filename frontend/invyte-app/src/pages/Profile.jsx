@@ -32,9 +32,11 @@ export default function Profile(){
 
 <div className="card w-full max-w-md bg-base-100 shadow-md p-6 m-6">
   <div className="card-body gap-4">
-      <h1 className='card-title'> {user.rank} {user.firstName} {user.lastName}</h1>
+      <h1 className='card-title'>User Profile</h1>
+      <p className='text-sm text-base-content/70'>Manage your password and account information.</p>
      </div>
-      <div className="space-y-2">
+      <div className="bg-base-100 shadow-md p-2 m-6 space-y-2">
+         <h1 className='font-bold text-lg'> {user.rank} {user.firstName} {user.lastName}</h1>
         <p><span className="font-semibold">Email</span>: {user.email}</p>
         <p><span className="font-semibold">Phone</span>: {user.phone}</p>
       </div>
