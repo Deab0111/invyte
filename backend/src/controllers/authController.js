@@ -9,7 +9,6 @@ async function register(req, res, next) {
       last_name,
       email,
       password,
-      role,
       rank,
       phone
     } = req.body
@@ -29,7 +28,7 @@ async function register(req, res, next) {
       last_name,
       email,
       password_hash,
-      role: role || 'user',
+      role: 'user',
       rank,
       phone
     })

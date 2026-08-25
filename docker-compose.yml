@@ -21,7 +21,13 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql://invyte:invyte_password@postgres:5432/invyte
+      PORT: 8000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: invyte
+      DB_PASSWORD: invyte_password
+      DB_NAME: invyte
+      JWT_SECRET: change_this_later
     depends_on:
       - postgres
 

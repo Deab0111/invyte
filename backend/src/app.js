@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser')
 const authRoutes = require('./routes/authRoutes')
 const errorHandler = require('./middleware/errorHandler')
 const userRoutes = require('./routes/userRoutes')
+const eventRoutes = require('./routes/eventRoutes')
+const rsvpRoutes = require('./routes/rsvpRoutes')
 
 const app = express()
 
@@ -24,7 +26,8 @@ app.get('/health', (req, res) => {
 
 app.use('/api/auth', authRoutes)
 app.use('/api/users', userRoutes)
-
+app.use('/api/events', eventRoutes)
+app.use('/api/rsvps', rsvpRoutes)
 app.use(errorHandler)
 
 module.exports = app
